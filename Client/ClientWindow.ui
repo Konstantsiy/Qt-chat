@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatWindow</class>
+ <widget class="QWidget" name="ChatWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>519</width>
+    <height>294</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qt Simple Chat Client</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">     background-color: rgb(12, 95, 58);
+	 
+color: rgb(255, 255, 255);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QLabel" name="label">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     background-color: rgb(12, 95, 58);
+     font: bold 13px;
+	color: rgb(255, 255, 255);
+     min-width: 5em;
+</string>
+     </property>
+     <property name="text">
+      <string>Message: </string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="pictureLabel">
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../Pictures/Avatar_Robot-512.png</pixmap>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QPushButton" name="sendButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     background-color: rgb(12, 95, 58);
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 5px;
+     border-color: beige;
+     font: bold 14px;
+	color: rgb(255, 255, 255);
+     min-width: 5em;
+     padding: 3px;</string>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLineEdit" name="messageEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="4">
+    <widget class="QListView" name="chatView">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+ border-radius: 5px;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" colspan="2">
+    <widget class="QPushButton" name="connectButton">
+     <property name="styleSheet">
+      <string notr="true">    background-color: rgb(12, 95, 58);
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 5px;
+     border-color: beige;
+     font: bold 14px;
+	color: rgb(255, 255, 255);
+     min-width: 10em;
+     padding: 3px;</string>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>connectButton</zorder>
+  <zorder>chatView</zorder>
+  <zorder>messageEdit</zorder>
+  <zorder>sendButton</zorder>
+  <zorder>label</zorder>
+  <zorder>pictureLabel</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
